@@ -1,0 +1,86 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+h2{
+    font-size: 1.5em;
+    color: red;
+    text-align: center;
+}
+.user-chat {
+    width: 45%;
+    margin: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    float: left;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.chat-window {
+    height: 200px;
+    overflow-y: scroll;
+}
+
+.message-input {
+    width: calc(100% - 140px); /* Decrease the width to accommodate the send button */
+    padding: 10px;
+    border-radius: 5px 0 0 5px;
+    border: 1px solid #ccc;
+    float: left; /* Float the input box to the left */
+}
+
+.send-btn {
+    width: 60px;
+    padding: 10px;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    float: right; /* Float the send button to the right */
+}
+
+
+.send-btn:hover {
+    background-color: #0056b3;
+}
+
+.chat-container {
+    clear: both;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.chat-message {
+    display: inline-block;
+    max-width: 70%;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 10px;
+}
+
+.user1-message {
+    background-color: #007bff;
+    color: #fff;
+    align-self: flex-start;
+}
+
+.user2-message {
+    background-color: #28a745;
+    color: #fff;
+    align-self: flex-end;
+}
+
+.message-animation {
+    animation: fadeIn 0.5s ease forwards;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
