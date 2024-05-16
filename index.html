@@ -5,24 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chat App</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@joeattardi/emoji-button@4.6.2/dist/index.min.css">
 </head>
 <body>
     <h2>Chatting App</h2>
     <div class="user-chat" id="user1-chat">
-        <h2>Nikes J.</h2>
+        <div class="user-header">
+            <img src="team-1.jpg" alt="Avatar" class="avatar">
+            <h2>Nikes J.</h2>
+        </div>
         <div class="chat-window" id="chat-window-user1">
             <!-- User 1's chat messages will be displayed here -->
         </div>
         <input type="text" class="message-input" id="message-input-user1" placeholder="Type your message...">
+        <button class="emoji-btn" id="emoji-btn-user1">😊</button>
         <button class="send-btn" id="send-btn-user1">Send</button>
     </div>
 
     <div class="user-chat" id="user2-chat">
-        <h2>Johnson B.</h2>
+        <div class="user-header">
+            <img src="team-1.jpg" alt="Avatar" class="avatar">
+            <h2>Johnson B.</h2>
+        </div>
         <div class="chat-window" id="chat-window-user2">
             <!-- User 2's chat messages will be displayed here -->
         </div>
         <input type="text" class="message-input" id="message-input-user2" placeholder="Type your message...">
+        <button class="emoji-btn" id="emoji-btn-user2">😊</button>
         <button class="send-btn" id="send-btn-user2">Send</button>
     </div>
 
@@ -32,6 +41,7 @@
         </div>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/@joeattardi/emoji-button@4.6.2/dist/index.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

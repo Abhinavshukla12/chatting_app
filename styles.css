@@ -2,39 +2,97 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0;
+    background: linear-gradient(270deg, #ff7e5f, #feb47b);
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
 }
 
-h2{
-    font-size: 1.5em;
-    color: red;
-    text-align: center;
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
+
+h2 {
+    font-size: 1.5em;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+.user-chat h2 {
+    font-size: 1.2em;
+    color: #007bff;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 5px;
+    border-radius: 5px;
+    text-align: left;
+}
+
 .user-chat {
     width: 45%;
     margin: 20px;
     padding: 10px;
     border-radius: 10px;
     float: left;
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.9);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.user-header {
+    display: flex;
+    align-items: center;
+}
+
+.user-header .avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; /* Circular border */
+    margin-right: 10px;
+    border: 2px solid #007bff; /* Example border color */background-size: cover; /* Cover the entire area */
+    background-position: center; /* Center the image */
 }
 
 .chat-window {
     height: 200px;
     overflow-y: scroll;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
 }
 
 .message-input {
-    width: calc(100% - 140px); /* Decrease the width to accommodate the send button */
+    width: calc(100% - 90px); /* Adjusted width to fit emoji button */
     padding: 10px;
     border-radius: 5px 0 0 5px;
     border: 1px solid #ccc;
-    float: left; /* Float the input box to the left */
+    float: left;
+    box-sizing: border-box;
+    margin: 0; /* Ensure no extra margin */
+}
+
+.emoji-btn {
+    width: 30px;
+    height: 42px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-left: none;
+    background-color: #fff;
+    cursor: pointer;
+    float: left;
+    margin: 0;
+    box-sizing: border-box;
 }
 
 .send-btn {
-    width: 60px;
+    width: 60px; /* Adjusted width */
     padding: 10px;
     border: none;
     border-radius: 0 5px 5px 0;
@@ -42,9 +100,9 @@ h2{
     color: #fff;
     cursor: pointer;
     transition: background-color 0.3s;
-    float: right; /* Float the send button to the right */
+    float: right;
+    margin: 0; /* Ensure no extra margin */
 }
-
 
 .send-btn:hover {
     background-color: #0056b3;
